@@ -61,8 +61,8 @@ public class HostingController {
     private void waitForRemotePlayer() {
         Optional<RemoteConfiguration> remoteConfiguration = Optional.empty(); 
         
-        // TODO should we close the server socket?
-        try (ServerSocket serverSocket = new ServerSocket(NetcodeConfiguration.PORT)) {
+        try {
+            ServerSocket serverSocket = new ServerSocket(NetcodeConfiguration.PORT);
             serverSocket.setSoTimeout(TIMEOUT);
             log.info("Starting to listen for remote player.");
             while (!remoteConfiguration.isPresent() && !cancelled) {

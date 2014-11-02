@@ -73,8 +73,8 @@ public class JoiningController {
         log.info("Attempting to join: {}", hostname);
 
         // TODO don't do all this I/O on the user interface thread
-        // TODO don't close the socket here?????
-        try (Socket socket = new Socket(hostname, NetcodeConfiguration.PORT)) {
+        try {
+            Socket socket = new Socket(hostname, NetcodeConfiguration.PORT);
             ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
             RemoteConfiguration remoteConfiguration = new RemoteConfiguration(Optional.of(out), Optional.of(in));
