@@ -8,7 +8,6 @@
 	<name>Tinustris Parent</name>
 
 	<modules>
-		<module>game-engine</module>
 		<module>tinustris</module>
 		<module>tinustris-assembly</module>
 	</modules>
@@ -16,6 +15,7 @@
 	<properties>
 		<!-- Version numbers. Please keep these sorted in alphabetical order. -->
 		<cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
+		<game-engine.version>1.0-SNAPSHOT</game-engine.version>
 		<jinput.version>2.0.6</jinput.version>
 		<junit.version>4.12</junit.version>
 		<lombok.version>1.16.2</lombok.version>
@@ -32,11 +32,11 @@
 		refer to the properties instead! -->
 	<dependencyManagement>
 		<dependencies>
-			<!-- Input -->
+			<!-- Game engine -->
 			<dependency>
-				<groupId>net.java.jinput</groupId>
-				<artifactId>jinput</artifactId>
-				<version>${jinput.version}</version>
+				<groupId>nl.mvdr.game</groupId>
+				<artifactId>game-engine</artifactId>
+				<version>${game-engine.version}</version>
 			</dependency>
 			
 			<!-- Compile-time assistance -->
@@ -50,11 +50,6 @@
 			</dependency>
 
 			<!-- Logging -->
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>${slf4j.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-log4j12</artifactId>

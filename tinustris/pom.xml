@@ -19,10 +19,10 @@
 	<!-- Dependencies. Please do not specify version numbers here; refer to 
 		dependency management in the parent pom instead! -->
 	<dependencies>
+		<!-- Game engine -->
 		<dependency>
-			<groupId>${project.parent.groupId}</groupId>
+			<groupId>nl.mvdr.game</groupId>
 			<artifactId>game-engine</artifactId>
-			<version>${project.parent.version}</version>
 		</dependency>
 	
 		<!-- Compile-time assistance -->
