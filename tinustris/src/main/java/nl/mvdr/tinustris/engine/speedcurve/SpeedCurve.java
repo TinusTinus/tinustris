@@ -57,6 +57,4 @@ public interface SpeedCurve {
      * @return line clear delay in frames, must be positive
      */
     int computeLineClearDelay(OnePlayerGameState state);
-    
-    // TODO add delayed auto shift (DAS)?
 }
