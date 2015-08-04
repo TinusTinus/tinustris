@@ -47,7 +47,7 @@ enum BlockStyle {
     /** Currently active blocks; that is, the tetromino that is currently being controlled by the player. */
     ACTIVE(1, Optional.empty(), Function.identity(), false), 
     /** Blocks that have already been dropped down. */
-    GRID(1, Optional.empty(), color -> color.darker(), false),
+    GRID(1, Optional.empty(), Color::darker, false),
     /**
      * Ghost blocks, that is, the blocks that indicate where the currently active block would land if dropped
      * straight down.
