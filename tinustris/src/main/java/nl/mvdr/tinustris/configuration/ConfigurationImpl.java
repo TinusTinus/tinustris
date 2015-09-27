@@ -20,7 +20,6 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
-import nl.mvdr.tinustris.gui.GraphicsStyle;
 
 /**
  * Implementation of {@link Configuration}.
@@ -31,13 +30,13 @@ import nl.mvdr.tinustris.gui.GraphicsStyle;
 @EqualsAndHashCode
 @RequiredArgsConstructor
 @Getter
-public class ConfigurationImpl implements Configuration {
+public class ConfigurationImpl<T extends GraphicsConfiguration> implements Configuration<T> {
     /** Configuration per player. */
     @NonNull
     private List<PlayerConfiguration> playerConfigurations;
     /** Graphical style for the blocks in the grid. */
     @NonNull
-    private final GraphicsStyle graphicsStyle;
+    private final T graphicsStyle;
     /** Behavior. */
     @NonNull
     private final Behavior behavior;

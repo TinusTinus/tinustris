@@ -67,7 +67,7 @@ public class Tinustris {
      * @param stage stage in which the game should be shown
      * @param configuration game configuration
      */
-    public void start(Stage stage, Configuration configuration) {
+    public void start(Stage stage, Configuration<GraphicsStyle> configuration) {
         log.info("Starting game with configuration: " + configuration);
         
         BlockCreator blockCreator = configuration.getGraphicsStyle().makeBlockCreator();
@@ -105,7 +105,7 @@ public class Tinustris {
      * @param onePlayerRenderers
      *            renderer for each player
      */
-    private void initAndStartGameLoop(List<OnePlayerGameRenderer> onePlayerRenderers, Configuration configuration) {
+    private void initAndStartGameLoop(List<OnePlayerGameRenderer> onePlayerRenderers, Configuration<GraphicsStyle> configuration) {
         
         int numPlayers = onePlayerRenderers.size();
         

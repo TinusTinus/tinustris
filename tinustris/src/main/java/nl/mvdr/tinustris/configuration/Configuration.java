@@ -17,16 +17,16 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-import nl.mvdr.tinustris.gui.GraphicsStyle;
-
 /**
  * Game configuration.
  * 
  * Sensible defaults have been included for all configuration properties, using default methods.
  * 
  * @author Martijn van de Rijdt
+ * 
+ * @param <T> type of graphics configuration
  */
-public interface Configuration {
+public interface Configuration<T extends GraphicsConfiguration> {
     /** 
      * Configuration for each of the players in this game. Should contain at least one value.
      * 
@@ -42,9 +42,7 @@ public interface Configuration {
      * 
      * @return style
      */
-    default GraphicsStyle getGraphicsStyle() {
-        return GraphicsStyle.defaultStyle();
-    }
+    T getGraphicsStyle();
     
     /**
      * Specification of the behavior of the actual gameplay.

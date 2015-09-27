@@ -349,7 +349,7 @@ public class ConfigurationScreenController {
     private void startGame(ActionEvent event) {
         log.info("Start game button activated.");
 
-        Configuration configuration = buildConfiguration();
+        Configuration<GraphicsStyle> configuration = buildConfiguration();
         log.info("Configuration: " + configuration);
         
         Node source = (Node)event.getSource();
@@ -367,7 +367,7 @@ public class ConfigurationScreenController {
      * 
      * @return Configuration
      */
-    private Configuration buildConfiguration() {
+    private Configuration<GraphicsStyle> buildConfiguration() {
         List<PlayerConfiguration> playerConfigurations = playerConfigurationControllers.stream()
             .map(PlayerConfigurationController::buildConfiguration)
             .collect(Collectors.toList());
@@ -378,7 +378,7 @@ public class ConfigurationScreenController {
         
         int startLevel = Integer.parseInt(startLevelTextField.getText());
         
-        return new ConfigurationImpl(playerConfigurations, graphicsStyle, behavior, startLevel, gapRandomSeed,
+        return new ConfigurationImpl<>(playerConfigurations, graphicsStyle, behavior, startLevel, gapRandomSeed,
                 tetrominoRandomSeed);
     }
 }

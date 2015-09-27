@@ -15,6 +15,7 @@ package nl.mvdr.tinustris.gui;
 
 import java.util.function.Supplier;
 
+import nl.mvdr.tinustris.configuration.GraphicsConfiguration;
 import javafx.application.ConditionalFeature;
 import javafx.application.Platform;
 import lombok.AccessLevel;
@@ -27,7 +28,7 @@ import lombok.RequiredArgsConstructor;
  * @author Martijn van de Rijdt
  */
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
-public enum GraphicsStyle {
+public enum GraphicsStyle implements GraphicsConfiguration {
     /** 2D graphics. */
     TWO_DIMENSIONAL("2D", () -> new RectangleBlockCreator(), true),
     /** Real-time 3D graphics. May not be supported in all runtimes. */

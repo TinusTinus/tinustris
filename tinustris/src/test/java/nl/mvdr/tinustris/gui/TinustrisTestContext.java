@@ -13,11 +13,10 @@
  */
 package nl.mvdr.tinustris.gui;
 
-import nl.mvdr.tinustris.configuration.Configuration;
-import nl.mvdr.tinustris.logging.Logging;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
+import nl.mvdr.tinustris.logging.Logging;
 
 /**
  * Main class, whose main method simply starts Tinustris with a default configuration.
@@ -51,7 +50,7 @@ public class TinustrisTestContext extends Application {
         log.info("Starting application.");
         Logging.setUncaughtExceptionHandler();
         
-        tinustris.start(stage, new Configuration() { /* all defaults */ });
+        tinustris.start(stage, () -> GraphicsStyle.defaultStyle());
     }
     
     /** {@inheritDoc} */
