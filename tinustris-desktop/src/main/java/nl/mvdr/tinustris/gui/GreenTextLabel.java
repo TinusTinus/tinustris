@@ -22,7 +22,7 @@ import javafx.scene.text.Font;
  * 
  * @author Martijn van de Rijdt
  */
-public class GreenTextLabel extends Label {
+class GreenTextLabel extends Label {
     /** Font size. */
     private static final int FONT_SIZE = 30;
 

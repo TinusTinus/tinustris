@@ -14,7 +14,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>${project.parent.groupId}</groupId>
-			<artifactId>tinustris</artifactId>
+			<artifactId>tinustris-desktop</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 	</dependencies>
