@@ -29,7 +29,7 @@ import nl.mvdr.game.state.GameState;
  * @author Martijn van de Rijdt
  */
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
-class CompositeRenderer<S extends GameState> implements GameRenderer<S> {
+public class CompositeRenderer<S extends GameState> implements GameRenderer<S> {
     /** Renderers. */
     private final List<GameRenderer<S>> renderers;
     
