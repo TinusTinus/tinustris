@@ -19,10 +19,10 @@ import java.util.Optional;
 
 import javafx.scene.Group;
 import javafx.scene.Node;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
-import nl.mvdr.tinustris.model.Orientation;
-import nl.mvdr.tinustris.model.Point;
-import nl.mvdr.tinustris.model.Tetromino;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
+import nl.mvdr.tinustris.core.model.Orientation;
+import nl.mvdr.tinustris.core.model.Point;
+import nl.mvdr.tinustris.core.model.Tetromino;
 
 /**
  * Shows the upcoming block.

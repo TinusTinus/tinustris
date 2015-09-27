@@ -15,7 +15,7 @@ package nl.mvdr.tinustris.desktop.gui;
 
 import java.io.IOException;
 
-import nl.mvdr.tinustris.logging.Logging;
+import nl.mvdr.tinustris.core.logging.Logging;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

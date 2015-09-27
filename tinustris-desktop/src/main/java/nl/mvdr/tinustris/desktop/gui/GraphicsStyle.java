@@ -15,7 +15,7 @@ package nl.mvdr.tinustris.desktop.gui;
 
 import java.util.function.Supplier;
 
-import nl.mvdr.tinustris.configuration.GraphicsConfiguration;
+import nl.mvdr.tinustris.core.configuration.GraphicsConfiguration;
 import javafx.application.ConditionalFeature;
 import javafx.application.Platform;
 import lombok.AccessLevel;

@@ -21,7 +21,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TabPane.TabClosingPolicy;
 import javafx.scene.control.TextField;
-import nl.mvdr.tinustris.configuration.Behavior;
+import nl.mvdr.tinustris.core.configuration.Behavior;
 import nl.mvdr.tinustris.desktop.controller.ConfigurationScreenController;
 
 import org.junit.Assert;

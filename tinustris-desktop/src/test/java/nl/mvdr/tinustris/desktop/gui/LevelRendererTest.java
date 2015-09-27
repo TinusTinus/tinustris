@@ -16,11 +16,11 @@ package nl.mvdr.tinustris.desktop.gui;
 import java.util.Optional;
 
 import javafx.embed.swing.JFXPanel;
+import nl.mvdr.tinustris.core.input.InputStateHistory;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
+import nl.mvdr.tinustris.core.model.Tetromino;
 import nl.mvdr.tinustris.desktop.gui.LevelRenderer;
 import nl.mvdr.tinustris.desktop.gui.LinesRenderer;
-import nl.mvdr.tinustris.input.InputStateHistory;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
-import nl.mvdr.tinustris.model.Tetromino;
 
 import org.junit.Assert;
 import org.junit.Before;

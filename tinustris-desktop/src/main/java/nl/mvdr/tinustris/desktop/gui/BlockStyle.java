@@ -35,7 +35,7 @@ import lombok.AccessLevel;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import nl.mvdr.game.engine.GameLoop;
-import nl.mvdr.tinustris.model.Block;
+import nl.mvdr.tinustris.core.model.Block;
 
 /**
  * Graphical styles of blocks.

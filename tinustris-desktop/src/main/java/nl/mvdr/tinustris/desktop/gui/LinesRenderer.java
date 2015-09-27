@@ -13,7 +13,7 @@
  */
 package nl.mvdr.tinustris.desktop.gui;
 
-import nl.mvdr.tinustris.model.OnePlayerGameState;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
 
 /**
  * Component showing the number of lines.

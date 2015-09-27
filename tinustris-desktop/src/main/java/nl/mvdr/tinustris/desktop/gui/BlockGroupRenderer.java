@@ -23,8 +23,8 @@ import javafx.scene.Node;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import nl.mvdr.game.gui.GameRenderer;
-import nl.mvdr.tinustris.model.Block;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
+import nl.mvdr.tinustris.core.model.Block;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
 
 /**
  * JavaFX node that contains a group of blocks.

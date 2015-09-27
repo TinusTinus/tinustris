@@ -38,7 +38,7 @@ import nl.mvdr.game.input.ControllerAndInputMapping;
 import nl.mvdr.game.input.InputMapping;
 import nl.mvdr.game.input.JInputCaptureController;
 import nl.mvdr.game.input.JInputControllerConfiguration;
-import nl.mvdr.tinustris.input.Input;
+import nl.mvdr.tinustris.core.input.Input;
 
 /**
  * Controller for ithe input configuration screen.

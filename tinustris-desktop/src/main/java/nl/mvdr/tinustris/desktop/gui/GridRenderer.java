@@ -20,9 +20,9 @@ import java.util.Set;
 
 import javafx.scene.Group;
 import javafx.scene.Node;
-import nl.mvdr.tinustris.model.Block;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
-import nl.mvdr.tinustris.model.Point;
+import nl.mvdr.tinustris.core.model.Block;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
+import nl.mvdr.tinustris.core.model.Point;
 
 /**
  * JavaFX node that contains the graphical representation of the grid.

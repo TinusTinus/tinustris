@@ -16,9 +16,9 @@ package nl.mvdr.tinustris.desktop.gui;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
+import nl.mvdr.tinustris.core.logging.Logging;
 import nl.mvdr.tinustris.desktop.gui.GraphicsStyle;
 import nl.mvdr.tinustris.desktop.gui.Tinustris;
-import nl.mvdr.tinustris.logging.Logging;
 
 /**
  * Main class, whose main method simply starts Tinustris with a default configuration.

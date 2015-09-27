@@ -15,9 +15,9 @@ package nl.mvdr.tinustris.desktop.gui;
 
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.shape.Rectangle;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
 import nl.mvdr.tinustris.desktop.gui.BlockCreator;
 import nl.mvdr.tinustris.desktop.gui.OnePlayerGameRenderer;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -36,10 +36,10 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import nl.mvdr.game.input.InputMapping;
 import nl.mvdr.game.input.JInputControllerConfiguration;
-import nl.mvdr.tinustris.configuration.PlayerConfiguration;
-import nl.mvdr.tinustris.configuration.LocalPlayerConfigurationImpl;
-import nl.mvdr.tinustris.input.Input;
-import nl.mvdr.tinustris.input.InputAndMapping;
+import nl.mvdr.tinustris.core.configuration.LocalPlayerConfigurationImpl;
+import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
+import nl.mvdr.tinustris.core.input.Input;
+import nl.mvdr.tinustris.core.input.InputAndMapping;
 
 /**
  * Controller for the player configuration user interface component.

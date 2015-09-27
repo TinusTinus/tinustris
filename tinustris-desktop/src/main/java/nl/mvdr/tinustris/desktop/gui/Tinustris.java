@@ -35,19 +35,19 @@ import nl.mvdr.game.gui.GameRenderer;
 import nl.mvdr.game.input.InputController;
 import nl.mvdr.game.input.JInputController;
 import nl.mvdr.game.input.JInputControllerConfiguration;
-import nl.mvdr.tinustris.configuration.Configuration;
-import nl.mvdr.tinustris.configuration.PlayerConfiguration;
-import nl.mvdr.tinustris.engine.GapGenerator;
-import nl.mvdr.tinustris.engine.Generator;
-import nl.mvdr.tinustris.engine.MultiplayerEngine;
-import nl.mvdr.tinustris.engine.OnePlayerEngine;
-import nl.mvdr.tinustris.engine.RandomTetrominoGenerator;
-import nl.mvdr.tinustris.gui.CompositeRenderer;
-import nl.mvdr.tinustris.gui.MultiplayerGameRenderer;
-import nl.mvdr.tinustris.input.Input;
-import nl.mvdr.tinustris.model.MultiplayerGameState;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
-import nl.mvdr.tinustris.model.Tetromino;
+import nl.mvdr.tinustris.core.configuration.Configuration;
+import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
+import nl.mvdr.tinustris.core.engine.GapGenerator;
+import nl.mvdr.tinustris.core.engine.Generator;
+import nl.mvdr.tinustris.core.engine.MultiplayerEngine;
+import nl.mvdr.tinustris.core.engine.OnePlayerEngine;
+import nl.mvdr.tinustris.core.engine.RandomTetrominoGenerator;
+import nl.mvdr.tinustris.core.gui.CompositeRenderer;
+import nl.mvdr.tinustris.core.gui.MultiplayerGameRenderer;
+import nl.mvdr.tinustris.core.input.Input;
+import nl.mvdr.tinustris.core.model.MultiplayerGameState;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
+import nl.mvdr.tinustris.core.model.Tetromino;
 
 /**
  * Class which can start a game of Tinustris.

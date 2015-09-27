@@ -16,8 +16,8 @@ package nl.mvdr.tinustris.desktop.gui;
 import javafx.scene.shape.Box;
 import javafx.scene.shape.Rectangle;
 import lombok.extern.slf4j.Slf4j;
+import nl.mvdr.tinustris.core.model.Block;
 import nl.mvdr.tinustris.desktop.gui.BlockStyle;
-import nl.mvdr.tinustris.model.Block;
 
 import org.junit.Test;
 

@@ -15,7 +15,7 @@ package nl.mvdr.tinustris.desktop.gui;
 
 import javafx.application.Platform;
 import nl.mvdr.game.gui.GameRenderer;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
 
 /**
  * Component showing whether the game is over. Should be part of an invisible group by default.

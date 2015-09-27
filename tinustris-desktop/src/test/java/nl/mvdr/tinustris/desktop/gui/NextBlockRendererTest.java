@@ -14,8 +14,8 @@
 package nl.mvdr.tinustris.desktop.gui;
 
 import javafx.scene.shape.Rectangle;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
 import nl.mvdr.tinustris.desktop.gui.NextBlockRenderer;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
 
 import org.junit.Test;
 

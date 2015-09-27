@@ -21,7 +21,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
-import nl.mvdr.tinustris.logging.Logging;
+import nl.mvdr.tinustris.core.logging.Logging;
 
 /**
  * Main class which opens the input configuration screen.

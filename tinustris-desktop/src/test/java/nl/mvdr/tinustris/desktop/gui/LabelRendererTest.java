@@ -15,8 +15,8 @@ package nl.mvdr.tinustris.desktop.gui;
 
 import javafx.embed.swing.JFXPanel;
 import lombok.extern.slf4j.Slf4j;
+import nl.mvdr.tinustris.core.model.DummyGameState;
 import nl.mvdr.tinustris.desktop.gui.LabelRenderer;
-import nl.mvdr.tinustris.model.DummyGameState;
 
 import org.junit.Assert;
 import org.junit.Before;

@@ -38,15 +38,15 @@ import javafx.stage.Stage;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import nl.mvdr.game.input.JInputControllerConfiguration;
-import nl.mvdr.tinustris.configuration.Behavior;
-import nl.mvdr.tinustris.configuration.Configuration;
-import nl.mvdr.tinustris.configuration.ConfigurationImpl;
-import nl.mvdr.tinustris.configuration.PlayerConfiguration;
+import nl.mvdr.tinustris.core.configuration.Behavior;
+import nl.mvdr.tinustris.core.configuration.Configuration;
+import nl.mvdr.tinustris.core.configuration.ConfigurationImpl;
+import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
+import nl.mvdr.tinustris.core.input.DefaultControllerConfiguration;
+import nl.mvdr.tinustris.core.input.Input;
+import nl.mvdr.tinustris.core.input.NoSuitableControllerException;
 import nl.mvdr.tinustris.desktop.gui.GraphicsStyle;
 import nl.mvdr.tinustris.desktop.gui.Tinustris;
-import nl.mvdr.tinustris.input.DefaultControllerConfiguration;
-import nl.mvdr.tinustris.input.Input;
-import nl.mvdr.tinustris.input.NoSuitableControllerException;
 
 /**
  * Controller for a configuration screen.

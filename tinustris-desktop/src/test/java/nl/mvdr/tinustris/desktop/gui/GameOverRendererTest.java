@@ -16,8 +16,8 @@ package nl.mvdr.tinustris.desktop.gui;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.Group;
 import lombok.extern.slf4j.Slf4j;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
 import nl.mvdr.tinustris.desktop.gui.GameOverRenderer;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
 
 import org.junit.Assert;
 import org.junit.Before;

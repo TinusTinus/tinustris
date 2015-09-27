@@ -14,7 +14,7 @@
 package nl.mvdr.tinustris.desktop.gui;
 
 import javafx.scene.shape.Box;
-import nl.mvdr.tinustris.model.Block;
+import nl.mvdr.tinustris.core.model.Block;
 
 /**
  * Implementation of {@link BlockCreator}, which creates 2D Rectangles.

@@ -32,7 +32,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NonNull;
 import nl.mvdr.game.gui.GameRenderer;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
 
 /**
  * Group containing all components to render a single player game.

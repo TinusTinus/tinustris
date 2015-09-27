@@ -20,12 +20,12 @@ import java.util.Optional;
 
 import javafx.scene.shape.Rectangle;
 import lombok.extern.slf4j.Slf4j;
+import nl.mvdr.tinustris.core.model.Block;
+import nl.mvdr.tinustris.core.model.OnePlayerGameState;
+import nl.mvdr.tinustris.core.model.Orientation;
+import nl.mvdr.tinustris.core.model.Point;
+import nl.mvdr.tinustris.core.model.Tetromino;
 import nl.mvdr.tinustris.desktop.gui.GridRenderer;
-import nl.mvdr.tinustris.model.Block;
-import nl.mvdr.tinustris.model.OnePlayerGameState;
-import nl.mvdr.tinustris.model.Orientation;
-import nl.mvdr.tinustris.model.Point;
-import nl.mvdr.tinustris.model.Tetromino;
 
 import org.junit.Assert;
 import org.junit.Test;

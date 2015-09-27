@@ -14,9 +14,9 @@
 package nl.mvdr.tinustris.desktop.gui;
 
 import javafx.scene.shape.Box;
+import nl.mvdr.tinustris.core.model.Block;
 import nl.mvdr.tinustris.desktop.gui.BlockStyle;
 import nl.mvdr.tinustris.desktop.gui.BoxBlockCreator;
-import nl.mvdr.tinustris.model.Block;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -29,7 +29,7 @@ import org.junit.Test;
 public class BoxBlockCreatorTest {
     /**
      * Test method for
-     * {@link BoxBlockCreator#createBlock(double, double, double, nl.mvdr.tinustris.model.Block, BlockStyle, int, int)}.
+     * {@link BoxBlockCreator#createBlock(double, double, double, nl.mvdr.tinustris.core.model.Block, BlockStyle, int, int)}.
      */
     @Test
     public void testCreate() {
