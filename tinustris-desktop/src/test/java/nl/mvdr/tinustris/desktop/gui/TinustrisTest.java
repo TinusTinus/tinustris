@@ -11,30 +11,21 @@
  * 
  * You should have received a copy of the GNU General Public License along with Tinustris. If not, see <http://www.gnu.org/licenses/>.
  */
-package nl.mvdr.tinustris.gui;
+package nl.mvdr.tinustris.desktop.gui;
 
-import java.util.List;
+import nl.mvdr.tinustris.desktop.gui.Tinustris;
 
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import nl.mvdr.game.gui.GameRenderer;
-import nl.mvdr.game.state.GameState;
+import org.junit.Test;
 
 /**
- * Game renderer which merely defers to a number of other renderers.
- * 
- * @param <S> game state type
+ * Test class for {@link Tinustris}.
  * 
  * @author Martijn van de Rijdt
  */
-@RequiredArgsConstructor
-public class CompositeRenderer<S extends GameState> implements GameRenderer<S> {
-    /** Renderers. */
-    private final List<GameRenderer<S>> renderers;
-    
-    /** {@inheritDoc} */
-    @Override
-    public void render(@NonNull S gameState) {
-        renderers.forEach(renderer -> renderer.render(gameState));
+public class TinustrisTest {
+    /** Tests {@link Tinustris#Tinustris()}. */
+    @Test
+    public void testDefaultConstructor() {
+        new Tinustris();
     }
 }

@@ -11,30 +11,45 @@
  * 
  * You should have received a copy of the GNU General Public License along with Tinustris. If not, see <http://www.gnu.org/licenses/>.
  */
-package nl.mvdr.tinustris.gui;
+package nl.mvdr.tinustris.desktop.gui;
 
-import java.util.List;
-
+import javafx.application.Platform;
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 import nl.mvdr.game.gui.GameRenderer;
 import nl.mvdr.game.state.GameState;
 
 /**
- * Game renderer which merely defers to a number of other renderers.
+ * Label containing (part of) the game state.
  * 
  * @param <S> game state type
  * 
  * @author Martijn van de Rijdt
  */
-@RequiredArgsConstructor
-public class CompositeRenderer<S extends GameState> implements GameRenderer<S> {
-    /** Renderers. */
-    private final List<GameRenderer<S>> renderers;
-    
+abstract class LabelRenderer<S extends GameState> extends GreenTextLabel implements GameRenderer<S> {
     /** {@inheritDoc} */
     @Override
     public void render(@NonNull S gameState) {
-        renderers.forEach(renderer -> renderer.render(gameState));
+        final String newText = toText(gameState);
+        if (!newText.equals(getText())) {
+            runOnJavaFXThread(() -> setText(newText));
+        }
     }
+    
+    /**
+     * Runs the given runnable on the JavaFX thread.
+     * 
+     * @param runnable runnable
+     */
+    // default visibility as an extension point for unit tests
+    void runOnJavaFXThread(Runnable runnable) {
+        Platform.runLater(runnable);
+    }
+    
+    /**
+     * Creates the text for this label based on the given game state.
+     * 
+     * @param state game state to be represented
+     * @return string representation of the given state; may not be null
+     */
+    protected abstract String toText(S state);
 }

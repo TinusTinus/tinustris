@@ -13,7 +13,6 @@
  */
 package nl.mvdr.tinustris.gui;
 
-import lombok.AccessLevel;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import nl.mvdr.game.gui.GameRenderer;
@@ -25,8 +24,8 @@ import nl.mvdr.tinustris.model.OnePlayerGameState;
  * 
  * @author Martijn van de Rijdt
  */
-@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
-class MultiplayerGameRenderer implements GameRenderer<MultiplayerGameState> {
+@RequiredArgsConstructor
+public class MultiplayerGameRenderer implements GameRenderer<MultiplayerGameState> {
     /** Renderer for the one player game. All {@link #render(MultiplayerGameState)} calls are deferred to this instance. */
     private final @NonNull GameRenderer<OnePlayerGameState> renderer;
     /**

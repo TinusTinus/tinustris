@@ -11,30 +11,19 @@
  * 
  * You should have received a copy of the GNU General Public License along with Tinustris. If not, see <http://www.gnu.org/licenses/>.
  */
-package nl.mvdr.tinustris.gui;
+package nl.mvdr.tinustris.desktop.gui;
 
-import java.util.List;
-
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import nl.mvdr.game.gui.GameRenderer;
-import nl.mvdr.game.state.GameState;
+import nl.mvdr.tinustris.model.OnePlayerGameState;
 
 /**
- * Game renderer which merely defers to a number of other renderers.
- * 
- * @param <S> game state type
+ * Component showing the number of lines.
  * 
  * @author Martijn van de Rijdt
  */
-@RequiredArgsConstructor
-public class CompositeRenderer<S extends GameState> implements GameRenderer<S> {
-    /** Renderers. */
-    private final List<GameRenderer<S>> renderers;
-    
+class LinesRenderer extends LabelRenderer<OnePlayerGameState> {
     /** {@inheritDoc} */
     @Override
-    public void render(@NonNull S gameState) {
-        renderers.forEach(renderer -> renderer.render(gameState));
+    protected String toText(OnePlayerGameState state) {
+        return "" + state.getLines();
     }
 }
