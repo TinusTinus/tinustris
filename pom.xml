@@ -8,7 +8,7 @@
 	<name>Tinustris Parent</name>
 
 	<modules>
-		<module>tinustris</module>
+		<module>tinustris-core</module>
 		<module>tinustris-desktop</module>
 	</modules>
 

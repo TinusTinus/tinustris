@@ -22,7 +22,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>${project.parent.groupId}</groupId>
-			<artifactId>tinustris</artifactId>
+			<artifactId>tinustris-core</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 	
