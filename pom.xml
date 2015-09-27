@@ -10,7 +10,6 @@
 	<modules>
 		<module>tinustris</module>
 		<module>tinustris-desktop</module>
-		<module>tinustris-assembly</module>
 	</modules>
 
 	<properties>
