@@ -8,7 +8,7 @@
 	<baseDirectory>tinustris</baseDirectory>
 	<fileSets>
 		<fileSet>
-			<directory>${basedir}/files</directory>
+			<directory>${basedir}/src/main/assembly/files</directory>
 			<outputDirectory>/</outputDirectory>
 			<lineEnding>unix</lineEnding>
 		</fileSet>
