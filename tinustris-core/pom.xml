@@ -25,12 +25,6 @@
 			<artifactId>game-engine</artifactId>
 		</dependency>
 		
-		<dependency>
-			<!-- TODO eliminate this dependency, JInput should only be necessary in the desktop client -->
-			<groupId>nl.mvdr.game</groupId>
-			<artifactId>game-engine-jinput</artifactId>
-		</dependency>
-	
 		<!-- Compile-time assistance -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
