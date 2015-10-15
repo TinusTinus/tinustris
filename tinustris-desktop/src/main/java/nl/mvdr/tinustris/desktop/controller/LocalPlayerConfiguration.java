@@ -11,14 +11,16 @@
  * 
  * You should have received a copy of the GNU General Public License along with Tinustris. If not, see <http://www.gnu.org/licenses/>.
  */
-package nl.mvdr.tinustris.core.configuration;
+package nl.mvdr.tinustris.desktop.controller;
 
+import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 import nl.mvdr.game.jinput.JInputControllerConfiguration;
+import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
 import nl.mvdr.tinustris.core.input.Input;
 
 /**
@@ -29,8 +31,8 @@ import nl.mvdr.tinustris.core.input.Input;
 @Getter
 @ToString
 @EqualsAndHashCode
-@RequiredArgsConstructor
-public class LocalPlayerConfigurationImpl implements PlayerConfiguration {
+@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
+class LocalPlayerConfiguration implements PlayerConfiguration {
     /** Player name. */
     @NonNull
     private final String name;

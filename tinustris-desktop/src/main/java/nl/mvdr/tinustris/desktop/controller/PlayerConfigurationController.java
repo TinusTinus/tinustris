@@ -36,7 +36,6 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import nl.mvdr.game.jinput.InputMapping;
 import nl.mvdr.game.jinput.JInputControllerConfiguration;
-import nl.mvdr.tinustris.core.configuration.LocalPlayerConfigurationImpl;
 import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
 import nl.mvdr.tinustris.core.input.Input;
 
@@ -132,7 +131,7 @@ public class PlayerConfigurationController {
      * @return configuration for this player
      */
     PlayerConfiguration buildConfiguration() {
-        return new LocalPlayerConfigurationImpl(nameProperty().getValue(), inputConfiguration);
+        return new LocalPlayerConfiguration(nameProperty().getValue(), inputConfiguration);
     }
     
     /**
