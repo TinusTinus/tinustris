@@ -34,6 +34,11 @@
 			<!-- Game engine -->
 			<dependency>
 				<groupId>nl.mvdr.game</groupId>
+				<artifactId>game-engine</artifactId>
+				<version>${game-engine.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>nl.mvdr.game</groupId>
 				<artifactId>game-engine-jinput</artifactId>
 				<version>${game-engine.version}</version>
 			</dependency>

@@ -11,16 +11,18 @@
  * 
  * You should have received a copy of the GNU General Public License along with Tinustris. If not, see <http://www.gnu.org/licenses/>.
  */
-package nl.mvdr.tinustris.core.input;
+package nl.mvdr.tinustris.desktop.controller;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import nl.mvdr.game.jinput.InputMapping;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
+import nl.mvdr.game.jinput.InputMapping;
+import nl.mvdr.tinustris.core.input.Input;
 
 /**
  * Container holding an input and its mapping.
@@ -29,8 +31,8 @@ import lombok.ToString;
  */
 @Getter
 @ToString
-@RequiredArgsConstructor
-public class InputAndMapping {
+@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
+class InputAndMapping {
     /** Input. */
     @NonNull
     private final Input input;
