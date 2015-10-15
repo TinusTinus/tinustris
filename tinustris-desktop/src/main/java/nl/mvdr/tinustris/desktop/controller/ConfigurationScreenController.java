@@ -42,9 +42,9 @@ import nl.mvdr.tinustris.core.configuration.Behavior;
 import nl.mvdr.tinustris.core.configuration.Configuration;
 import nl.mvdr.tinustris.core.configuration.ConfigurationImpl;
 import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
-import nl.mvdr.tinustris.core.input.DefaultControllerConfiguration;
 import nl.mvdr.tinustris.core.input.Input;
 import nl.mvdr.tinustris.core.input.NoSuitableControllerException;
+import nl.mvdr.tinustris.desktop.configuration.DefaultControllerConfiguration;
 import nl.mvdr.tinustris.desktop.gui.GraphicsStyle;
 import nl.mvdr.tinustris.desktop.gui.Tinustris;
 

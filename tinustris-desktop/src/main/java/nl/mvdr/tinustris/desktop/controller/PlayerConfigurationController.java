@@ -38,6 +38,7 @@ import nl.mvdr.game.jinput.InputMapping;
 import nl.mvdr.game.jinput.JInputControllerConfiguration;
 import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
 import nl.mvdr.tinustris.core.input.Input;
+import nl.mvdr.tinustris.desktop.configuration.LocalPlayerConfiguration;
 
 /**
  * Controller for the player configuration user interface component.

@@ -11,7 +11,7 @@
  * 
  * You should have received a copy of the GNU General Public License along with Tinustris. If not, see <http://www.gnu.org/licenses/>.
  */
-package nl.mvdr.tinustris.core.input;
+package nl.mvdr.tinustris.desktop.configuration;
 
 import java.util.HashSet;
 import java.util.Map;
@@ -34,6 +34,8 @@ import net.java.games.input.Controller.Type;
 import net.java.games.input.ControllerEnvironment;
 import nl.mvdr.game.jinput.InputMapping;
 import nl.mvdr.game.jinput.JInputControllerConfiguration;
+import nl.mvdr.tinustris.core.input.Input;
+import nl.mvdr.tinustris.core.input.NoSuitableControllerException;
 
 /**
  * Default controller configurations for Tinustris.

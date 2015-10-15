@@ -11,7 +11,7 @@
  * 
  * You should have received a copy of the GNU General Public License along with Tinustris. If not, see <http://www.gnu.org/licenses/>.
  */
-package nl.mvdr.tinustris.desktop.controller;
+package nl.mvdr.tinustris.desktop.configuration;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

@@ -24,10 +24,10 @@ import nl.mvdr.tinustris.core.configuration.Behavior;
 import nl.mvdr.tinustris.core.configuration.Configuration;
 import nl.mvdr.tinustris.core.configuration.ConfigurationImpl;
 import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
-import nl.mvdr.tinustris.core.input.DefaultControllerConfiguration;
 import nl.mvdr.tinustris.core.input.NoSuitableControllerException;
 import nl.mvdr.tinustris.core.logging.Logging;
-import nl.mvdr.tinustris.desktop.controller.LocalPlayerConfiguration;
+import nl.mvdr.tinustris.desktop.configuration.DefaultControllerConfiguration;
+import nl.mvdr.tinustris.desktop.configuration.LocalPlayerConfiguration;
 
 /**
  * Main class, whose main method simply starts Tinustris with a default configuration.
