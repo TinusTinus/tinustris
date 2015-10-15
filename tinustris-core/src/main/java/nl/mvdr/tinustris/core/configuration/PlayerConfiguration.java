@@ -13,7 +13,7 @@
  */
 package nl.mvdr.tinustris.core.configuration;
 
-import nl.mvdr.game.input.JInputControllerConfiguration;
+import nl.mvdr.game.jinput.JInputControllerConfiguration;
 import nl.mvdr.tinustris.core.input.DefaultControllerConfiguration;
 import nl.mvdr.tinustris.core.input.Input;
 import nl.mvdr.tinustris.core.input.NoSuitableControllerException;

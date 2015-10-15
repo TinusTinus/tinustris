@@ -34,10 +34,10 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import net.java.games.input.Controller;
-import nl.mvdr.game.input.ControllerAndInputMapping;
-import nl.mvdr.game.input.InputMapping;
-import nl.mvdr.game.input.JInputCaptureController;
-import nl.mvdr.game.input.JInputControllerConfiguration;
+import nl.mvdr.game.jinput.ControllerAndInputMapping;
+import nl.mvdr.game.jinput.InputMapping;
+import nl.mvdr.game.jinput.JInputCaptureController;
+import nl.mvdr.game.jinput.JInputControllerConfiguration;
 import nl.mvdr.tinustris.core.input.Input;
 
 /**

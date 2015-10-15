@@ -32,8 +32,8 @@ import net.java.games.input.Component.POV;
 import net.java.games.input.Controller;
 import net.java.games.input.Controller.Type;
 import net.java.games.input.ControllerEnvironment;
-import nl.mvdr.game.input.InputMapping;
-import nl.mvdr.game.input.JInputControllerConfiguration;
+import nl.mvdr.game.jinput.InputMapping;
+import nl.mvdr.game.jinput.JInputControllerConfiguration;
 
 /**
  * Default controller configurations for Tinustris.

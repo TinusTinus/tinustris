@@ -16,7 +16,7 @@ package nl.mvdr.tinustris.core.input;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import nl.mvdr.game.input.InputMapping;
+import nl.mvdr.game.jinput.InputMapping;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

@@ -37,7 +37,7 @@ import javafx.scene.control.Toggle;
 import javafx.stage.Stage;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
-import nl.mvdr.game.input.JInputControllerConfiguration;
+import nl.mvdr.game.jinput.JInputControllerConfiguration;
 import nl.mvdr.tinustris.core.configuration.Behavior;
 import nl.mvdr.tinustris.core.configuration.Configuration;
 import nl.mvdr.tinustris.core.configuration.ConfigurationImpl;
