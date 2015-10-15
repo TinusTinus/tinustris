@@ -13,12 +13,21 @@
  */
 package nl.mvdr.tinustris.desktop.gui;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
+import nl.mvdr.tinustris.core.configuration.Behavior;
+import nl.mvdr.tinustris.core.configuration.Configuration;
+import nl.mvdr.tinustris.core.configuration.ConfigurationImpl;
+import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
+import nl.mvdr.tinustris.core.input.DefaultControllerConfiguration;
+import nl.mvdr.tinustris.core.input.NoSuitableControllerException;
 import nl.mvdr.tinustris.core.logging.Logging;
-import nl.mvdr.tinustris.desktop.gui.GraphicsStyle;
-import nl.mvdr.tinustris.desktop.gui.Tinustris;
+import nl.mvdr.tinustris.desktop.controller.LocalPlayerConfiguration;
 
 /**
  * Main class, whose main method simply starts Tinustris with a default configuration.
@@ -52,7 +61,16 @@ public class TinustrisTestContext extends Application {
         log.info("Starting application.");
         Logging.setUncaughtExceptionHandler();
         
-        tinustris.start(stage, () -> GraphicsStyle.defaultStyle());
+        try {
+            PlayerConfiguration playerConfiguration = new LocalPlayerConfiguration("", DefaultControllerConfiguration.get());
+            List<PlayerConfiguration> playerConfigurations = Collections.singletonList(playerConfiguration);
+            Configuration<GraphicsStyle> configuration = new ConfigurationImpl<>(playerConfigurations,
+                    GraphicsStyle.defaultStyle(), Behavior.defaultBehavior(), 0, new Random().nextLong(),
+                    new Random().nextLong());
+            tinustris.start(stage, configuration);
+        } catch (NoSuitableControllerException e) {
+            throw new IllegalStateException(e);
+        }
     }
     
     /** {@inheritDoc} */

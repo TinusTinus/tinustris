@@ -13,12 +13,13 @@
  */
 package nl.mvdr.tinustris.desktop.controller;
 
-import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
+import nl.mvdr.game.input.InputController;
+import nl.mvdr.game.jinput.JInputController;
 import nl.mvdr.game.jinput.JInputControllerConfiguration;
 import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
 import nl.mvdr.tinustris.core.input.Input;
@@ -28,15 +29,21 @@ import nl.mvdr.tinustris.core.input.Input;
  * 
  * @author Martijn van de Rijdt
  */
-@Getter
 @ToString
 @EqualsAndHashCode
-@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
-class LocalPlayerConfiguration implements PlayerConfiguration {
+@RequiredArgsConstructor
+public class LocalPlayerConfiguration implements PlayerConfiguration {
     /** Player name. */
     @NonNull
+    @Getter
     private final String name;
     /** Configuration for the JInputController for this player. */
     @NonNull
     private final JInputControllerConfiguration<Input> jInputControllerConfiguration;
+    
+    /** {@inheritDoc} */
+    @Override
+    public InputController<Input> createInputController() {
+        return new JInputController<>(Input.class, jInputControllerConfiguration);
+    }
 }

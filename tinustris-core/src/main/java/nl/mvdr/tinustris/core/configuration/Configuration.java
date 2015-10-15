@@ -26,6 +26,7 @@ import java.util.Random;
  * 
  * @param <T> type of graphics configuration
  */
+@FunctionalInterface
 public interface Configuration<T extends GraphicsConfiguration> {
     /** 
      * Configuration for each of the players in this game. Should contain at least one value.

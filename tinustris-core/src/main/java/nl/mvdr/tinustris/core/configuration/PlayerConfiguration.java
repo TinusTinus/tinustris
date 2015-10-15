@@ -14,11 +14,7 @@
 package nl.mvdr.tinustris.core.configuration;
 
 import nl.mvdr.game.input.InputController;
-import nl.mvdr.game.jinput.JInputController;
-import nl.mvdr.game.jinput.JInputControllerConfiguration;
-import nl.mvdr.tinustris.core.input.DefaultControllerConfiguration;
 import nl.mvdr.tinustris.core.input.Input;
-import nl.mvdr.tinustris.core.input.NoSuitableControllerException;
 
 /**
  * Configuration for a player.
@@ -30,24 +26,12 @@ public interface PlayerConfiguration {
     /** @return player name */
     String getName();
     
-    /** @return configuration for JInputController for this player */
-    default JInputControllerConfiguration<Input> getJInputControllerConfiguration() {
-        JInputControllerConfiguration<Input> result;
-        try {
-            result = DefaultControllerConfiguration.get();
-        } catch (NoSuitableControllerException e) {
-            throw new IllegalStateException(e);
-        }
-        return result;
-    }
-    
     /**
      * Creates an input controller based on this player configuration.
      * 
      * @return input controller
      */
     default InputController<Input> createInputController() {
-        JInputControllerConfiguration<Input> inputControllerConfiguration = getJInputControllerConfiguration();
-        return new JInputController<>(Input.class, inputControllerConfiguration);
+        return () -> (input -> false);
     }
 }
