@@ -33,8 +33,6 @@ import nl.mvdr.game.engine.GameEngine;
 import nl.mvdr.game.engine.GameLoop;
 import nl.mvdr.game.gui.GameRenderer;
 import nl.mvdr.game.input.InputController;
-import nl.mvdr.game.jinput.JInputController;
-import nl.mvdr.game.jinput.JInputControllerConfiguration;
 import nl.mvdr.tinustris.core.configuration.Configuration;
 import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
 import nl.mvdr.tinustris.core.engine.GapGenerator;
@@ -113,7 +111,7 @@ public class Tinustris {
         
         List<InputController<Input>> inputControllers = configuration.getPlayerConfigurations()
                 .stream()
-                .map(this::createInputController)
+                .map(PlayerConfiguration::createInputController)
                 .collect(Collectors.toList());
         
         Generator<Tetromino> tetrominoGenerator = new RandomTetrominoGenerator(configuration.getTetrominoRandomSeed());
@@ -138,17 +136,6 @@ public class Tinustris {
         log.info("Ready to start game loop: " + gameLoop);
         gameLoop.start();
         log.info("Game loop started in separate thread.");
-    }
-
-    /**
-     * Creates an input controller based on the given player configuration.
-     * 
-     * @param playerConfiguration player config
-     * @return input controller
-     */
-    private InputController<Input> createInputController(PlayerConfiguration playerConfiguration) {
-        JInputControllerConfiguration<Input> inputControllerConfiguration = playerConfiguration.getJInputControllerConfiguration();
-        return new JInputController<>(Input.class, inputControllerConfiguration);
     }
 
     /**

@@ -13,6 +13,8 @@
  */
 package nl.mvdr.tinustris.core.configuration;
 
+import nl.mvdr.game.input.InputController;
+import nl.mvdr.game.jinput.JInputController;
 import nl.mvdr.game.jinput.JInputControllerConfiguration;
 import nl.mvdr.tinustris.core.input.DefaultControllerConfiguration;
 import nl.mvdr.tinustris.core.input.Input;
@@ -37,5 +39,15 @@ public interface PlayerConfiguration {
             throw new IllegalStateException(e);
         }
         return result;
+    }
+    
+    /**
+     * Creates an input controller based on this player configuration.
+     * 
+     * @return input controller
+     */
+    default InputController<Input> createInputController() {
+        JInputControllerConfiguration<Input> inputControllerConfiguration = getJInputControllerConfiguration();
+        return new JInputController<>(Input.class, inputControllerConfiguration);
     }
 }
