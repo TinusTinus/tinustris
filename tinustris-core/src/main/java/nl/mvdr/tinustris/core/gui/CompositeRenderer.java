@@ -26,7 +26,10 @@ import nl.mvdr.game.state.GameState;
  * @param <S> game state type
  * 
  * @author Martijn van de Rijdt
+ * 
+ * @deprecated use nl.mvdr.game.gui.CompositeRenderer, after upgarding to the next release of game engine
  */
+@Deprecated // a copy of this class was added to the Game Engine project 
 @RequiredArgsConstructor
 public class CompositeRenderer<S extends GameState> implements GameRenderer<S> {
     /** Renderers. */

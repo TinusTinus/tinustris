@@ -35,7 +35,8 @@ public interface Configuration<T extends GraphicsConfiguration> {
      */
     default List<PlayerConfiguration> getPlayerConfigurations() {
         // default configuration with an empty player name
-        return Collections.singletonList((PlayerConfiguration) () -> "");
+        PlayerConfiguration playerConfiguration = () -> "";
+        return Collections.singletonList(playerConfiguration);
     }
     
     /**

@@ -197,7 +197,7 @@ public class OnePlayerEngine implements GameEngine<OnePlayerGameState, Input> {
             actions.add(Action.LOCK);
         }
         
-        actions.sort(Action::compareTo);
+        actions.sort(null);
         
         return actions;
     }

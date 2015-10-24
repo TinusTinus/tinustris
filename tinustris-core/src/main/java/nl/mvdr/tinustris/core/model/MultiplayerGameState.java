@@ -14,7 +14,6 @@
 package nl.mvdr.tinustris.core.model;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -114,15 +113,9 @@ public class MultiplayerGameState implements GameState {
     @Override
     public boolean isGameOver() {
         // The game is not over as long as there are at least two players still playing.
-        int numberOfActivePlayers = 0;
-        Iterator<OnePlayerGameState> iterator = states.iterator();
-        
-        while (numberOfActivePlayers < 2 && iterator.hasNext()) {
-            if (!iterator.next().isGameOver()) {
-                numberOfActivePlayers++;
-            }
-        }
-        return numberOfActivePlayers < 2;
+        return states.stream()
+            .filter(s -> !s.isGameOver())
+            .count() < 2;
     }
     
     /** @return the number of players in the game represented by this game state*/

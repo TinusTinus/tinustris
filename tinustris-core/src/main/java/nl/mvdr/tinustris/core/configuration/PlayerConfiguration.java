@@ -32,6 +32,7 @@ public interface PlayerConfiguration {
      * @return input controller
      */
     default InputController<Input> createInputController() {
+        // dummy implementation: no buttons are ever pressed
         return () -> (input -> false);
     }
 }
