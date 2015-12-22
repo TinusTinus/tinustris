@@ -21,7 +21,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
-import nl.mvdr.tinustris.core.logging.Logging;
+import nl.mvdr.tinustris.core.logging.TinustrisLogging;
 
 /**
  * Main class which opens the input configuration screen.
@@ -40,12 +40,15 @@ import nl.mvdr.tinustris.core.logging.Logging;
  */
 @Slf4j
 public class InputConfigurationTestContext extends Application {
+    /** Logging helper. */
+    private static final TinustrisLogging logging = new TinustrisLogging();
+    
     /** {@inheritDoc} */
     @Override
     public void start(Stage primaryStage) throws IOException {
         log.info("Starting application.");
         
-        Logging.setUncaughtExceptionHandler();
+        logging.setUncaughtExceptionHandler();
         
         Parent parent = FXMLLoader.load(getClass().getResource("/InputConfiguration.fxml"));
         
@@ -61,10 +64,9 @@ public class InputConfigurationTestContext extends Application {
     public static void main(String[] args) {
         log.info("Starting Input configuration screen.");
         
-        Logging.logVersionInfo();
-        
+        logging.logVersionInfo();
         // JInput uses java.util.logging; redirect to slf4j.
-        Logging.installSlf4jBridge();
+        logging.installSlf4jBridge();
 
         launch(args);
     }

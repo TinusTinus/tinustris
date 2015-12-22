@@ -25,7 +25,7 @@ import nl.mvdr.tinustris.core.configuration.Configuration;
 import nl.mvdr.tinustris.core.configuration.ConfigurationImpl;
 import nl.mvdr.tinustris.core.configuration.PlayerConfiguration;
 import nl.mvdr.tinustris.core.input.NoSuitableControllerException;
-import nl.mvdr.tinustris.core.logging.Logging;
+import nl.mvdr.tinustris.core.logging.TinustrisLogging;
 import nl.mvdr.tinustris.desktop.configuration.DefaultControllerConfiguration;
 import nl.mvdr.tinustris.desktop.configuration.LocalPlayerConfiguration;
 
@@ -46,6 +46,9 @@ import nl.mvdr.tinustris.desktop.configuration.LocalPlayerConfiguration;
  */
 @Slf4j
 public class TinustrisTestContext extends Application {
+    /** Logging helper. */
+    private static final TinustrisLogging logging = new TinustrisLogging();
+
     /** Tinustris instance. */
     private final Tinustris tinustris;
     
@@ -59,7 +62,7 @@ public class TinustrisTestContext extends Application {
     @Override
     public void start(Stage stage) {
         log.info("Starting application.");
-        Logging.setUncaughtExceptionHandler();
+        logging.setUncaughtExceptionHandler();
         
         try {
             PlayerConfiguration playerConfiguration = new LocalPlayerConfiguration("", DefaultControllerConfiguration.get());
@@ -93,10 +96,10 @@ public class TinustrisTestContext extends Application {
     public static void main(String[] args) {
         log.info("Starting Tinustris.");
 
-        Logging.logVersionInfo();
-        
+        logging.logVersionInfo();
         // JInput uses java.util.logging; redirect to slf4j.
-        Logging.installSlf4jBridge();
+        logging.installSlf4jBridge();
+
         
         // Launch the application!
         launch(args);

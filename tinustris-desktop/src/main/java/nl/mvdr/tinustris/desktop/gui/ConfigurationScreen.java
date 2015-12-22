@@ -15,7 +15,6 @@ package nl.mvdr.tinustris.desktop.gui;
 
 import java.io.IOException;
 
-import nl.mvdr.tinustris.core.logging.Logging;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -23,6 +22,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import nl.mvdr.tinustris.core.logging.TinustrisLogging;
 
 /**
  * Configuration screen for selecting graphics style, player controls etc..
@@ -32,12 +32,15 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 public class ConfigurationScreen extends Application {
+    /** Logging helper. */
+    private static final TinustrisLogging logging = new TinustrisLogging();
+    
     /** {@inheritDoc} */
     @Override
     public void start(Stage primaryStage) throws IOException {
         log.info("Starting application.");
         
-        Logging.setUncaughtExceptionHandler();
+        logging.setUncaughtExceptionHandler();
         
         FXMLLoader fxmlLoader = new FXMLLoader(ConfigurationScreen.class.getResource("/Configuration.fxml"));
 
@@ -56,10 +59,9 @@ public class ConfigurationScreen extends Application {
     public static void main(String[] args) {
         log.info("Starting Tinustris configuration screen.");
 
-        Logging.logVersionInfo();
-        
+        logging.logVersionInfo();
         // JInput uses java.util.logging; redirect to slf4j.
-        Logging.installSlf4jBridge();
+        logging.installSlf4jBridge();
 
         Application.launch(args);
     }

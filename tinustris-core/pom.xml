@@ -53,9 +53,9 @@
 	<build>
 		<plugins>
 			<plugin>
-				<!-- generate a jar with a manifest -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<!-- generate a jar with a manifest -->
 				<configuration>
 					<archive>
 						<manifest>
@@ -64,6 +64,7 @@
 						</manifest>
 					</archive>
 				</configuration>
+				<!-- generate a test jar, so other projects can use dummy implementations -->
 				<executions>
 					<execution>
 						<goals>

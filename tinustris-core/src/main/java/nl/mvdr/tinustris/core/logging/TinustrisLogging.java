@@ -13,19 +13,26 @@
  */
 package nl.mvdr.tinustris.core.logging;
 
-import nl.mvdr.tinustris.core.logging.Logging;
+import lombok.extern.slf4j.Slf4j;
+import nl.mvdr.game.logging.Logging;
 
-import org.junit.Test;
+import org.slf4j.bridge.SLF4JBridgeHandler;
 
 /**
- * Test class for {@link Logging}.
+ * Logging helper class.
  * 
  * @author Martijn van de Rijdt
  */
-public class LoggingTest {
-    /** Test method for {@link Logging#logVersionInfo()}. */
-    @Test
-    public void testLogVersionInfo() {
-        Logging.logVersionInfo();
+@Slf4j
+public class TinustrisLogging extends Logging {
+    /** Installs a bridge for java.util.logging to slf4j. */
+    public void installSlf4jBridge() {
+        log.info("Installing java.util.logging to slf4j bridge.");
+        
+        // remove existing handlers attached to java.util.logging root logger
+        SLF4JBridgeHandler.removeHandlersForRootLogger();
+
+        // add SLF4JBridgeHandler to java.util.logging's root logger
+        SLF4JBridgeHandler.install();
     }
 }

@@ -29,10 +29,11 @@ import nl.mvdr.tinustris.core.input.Input;
  * 
  * @author Martijn van de Rijdt
  */
+// This class is public, because reducing visibility to package seems to break JavaFX initialisation.
 @Getter
 @ToString
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
-class InputAndMapping {
+public class InputAndMapping {
     /** Input. */
     @NonNull
     private final Input input;
