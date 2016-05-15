@@ -3,9 +3,9 @@ before_install:
   - mkdir temp
   - cd temp
   - wget https://github.com/TinusTinus/game-engine/releases/download/game-engine-parent-2.1/game-engine-2.1.jar
-  - mvn install:install-file -Dfile=game-engine-2.1.jar
+  - mvn install:2.5.2:install-file -Dfile=game-engine-2.1.jar
   - wget https://github.com/TinusTinus/game-engine/releases/download/game-engine-parent-2.1/game-engine-jinput-2.1.jar
-  - mvn install:install-file -Dfile=game-engine-jinput-2.1.jar
+  - mvn install:2.5.2:install-file -Dfile=game-engine-jinput-2.1.jar
   - cd ..
 
 language: java
